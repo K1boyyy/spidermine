@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Favorite Spidermine 🕸️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="web-bg"></div>
+  <div id="hearts"></div>
+
+  <main>
+    <!-- PAGE 1 -->
+    <section class="page active" id="page-date">
+      <div class="spider-logo" aria-hidden="true">🕷️</div>
+      <p class="eyebrow">A tiny surprise from your favorite girl</p>
+      <h1>HI, MAS! <span>🕸️</span></h1>
+      <p class="subtitle">please enter our anniversary date</p>
+
+      <div class="date-inputs" id="dateInputs">
+        <input maxlength="1" inputmode="numeric" aria-label="date digit 1">
+        <input maxlength="1" inputmode="numeric" aria-label="date digit 2">
+        <span class="dot">•</span>
+        <input maxlength="1" inputmode="numeric" aria-label="date digit 3">
+        <input maxlength="1" inputmode="numeric" aria-label="date digit 4">
+        <span class="dot">•</span>
+        <input maxlength="1" inputmode="numeric" aria-label="date digit 5">
+        <input maxlength="1" inputmode="numeric" aria-label="date digit 6">
+      </div>
+
+      <button class="primary-btn" id="dateBtn">ENTER <span>→</span></button>
+      <p class="hint" id="dateHint"></p>
+      <p class="tiny">our little secret: DDMMYY ♡</p>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page-love">
+      <div class="big-spider">🕷️</div>
+      <p class="eyebrow">SECURITY CHECK</p>
+      <h2>DO YOU LOVE ME?</h2>
+      <p class="subtitle">choose wisely, superhero.</p>
+      <div class="choice-row">
+        <button class="yes-btn" id="yesBtn">YES ❤️</button>
+        <button class="no-btn" id="noBtn">NO</button>
+      </div>
+      <p class="hint" id="noHint"></p>
+    </section>
+
+    <!-- 404 -->
+    <section class="page glitch-page" id="page-404">
+      <div class="error-code">404</div>
+      <h2>LOVE NOT FOUND</h2>
+      <p>hmmm... wrong answer, mas 🕷️</p>
+      <button class="primary-btn" id="backLoveBtn">TRY AGAIN</button>
+    </section>
+
+    <!-- PAGE 3 LOVE LETTER -->
+    <section class="page letter-page" id="page-letter">
+      <div class="letter-card">
+        <div class="stamp">♡</div>
+        <p class="eyebrow">A LETTER FOR MY FAVORITE PERSON</p>
+        <h2>dear mas,</h2>
+        <p>
+          yes! i love you more mas sayanggg. happy boyfriend day, sayangkuuu!
+          dede sayang banget sama mas &lt;3 dede selalu sayang mas tiap hariii.
+        </p>
+        <p>
+          semoga dede selalu jadi alasan mas bahagia, bukan alasan mas sedih :(
+          i love you more than words can describe.
+        </p>
+        <p>
+          pengen banget peluk mas 24 jam sampai sesak nafas.
+          you're my favorite spidermine! and always be 🕸
+        </p>
+        <div class="kiss-placeholder">
+          <div class="upside-spidey">🕷️</div>
+          <span>our little upside-down love ♡</span>
+        </div>
+      </div>
+      <button class="primary-btn next-btn" data-next="page-music">NEXT →</button>
+    </section>
+
+    <!-- PAGE 4 MUSIC -->
+    <section class="page music-page" id="page-music">
+      <div class="music-card">
+        <div class="vinyl">♪</div>
+        <p class="eyebrow">PLAY THIS WITH ME</p>
+        <h2>NANTI KITA SEPERTI INI</h2>
+        <p class="song-note">"kau dipanggil ibu sementara aku ayah"</p>
+        <button class="music-btn" id="musicBtn">▶ PLAY OUR SONG</button>
+        <audio id="ourSong" controls preload="metadata">
+          <source src="music/our-song.mp3" type="audio/mpeg">
+        </audio>
+        <p class="audio-note">Masukkan file lagu yang kamu punya sendiri ke folder <b>music</b> dengan nama <b>our-song.mp3</b>.</p>
+        <div class="future-note">
+          semoga kita beneran bisa dipanggil kayak begini ya sama anak-anak kita nanti 🥹❤️
+        </div>
+      </div>
+      <button class="primary-btn next-btn" data-next="page-game">NEXT →</button>
+    </section>
+
+    <!-- PAGE 5 GAME -->
+    <section class="page game-page" id="page-game">
+      <p class="eyebrow">SPIDER-MAS TRAINING</p>
+      <h2>CATCH THE HEARTS! 🕷️</h2>
+      <p class="subtitle">catch 10 hearts before the timer runs out.</p>
+
+      <div class="game-stats">
+        <span>HEARTS: <b id="score">0</b>/10</span>
+        <span>TIME: <b id="timer">20</b>s</span>
+      </div>
+
+      <div class="game-board" id="gameBoard">
+        <div class="player" id="player">🕷️</div>
+        <button class="start-game" id="startGame">START GAME</button>
+      </div>
+
+      <p class="game-message" id="gameMessage"></p>
+      <button class="primary-btn hidden" id="gameNext">I WON! →</button>
+    </section>
+
+    <!-- PAGE 6 FINAL -->
+    <section class="page final-page" id="page-final">
+      <p class="eyebrow">LAST BUT NOT LEAST...</p>
+      <h2>ONE LAST THING. ♡</h2>
+
+      <div class="photo-frame">
+        <img id="couplePhoto" src="images/us.jpg" alt="Our photo">
+        <div class="photo-fallback">
+          <span>📸</span>
+          <p>Put your photo here!</p>
+          <small>images/us.jpg</small>
+        </div>
+      </div>
+
+      <h3>i love you today,<br>tomorrow, and everyday.</h3>
+      <p class="signature">— your favorite spidermine 🕸️❤️</p>
+      <div class="final-web">✦ &nbsp; 🕸️ &nbsp; ♥ &nbsp; 🕸️ &nbsp; ✦</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
